@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+      <!-- next-profile-v1 - https://coolors.co/ffffe0-80808d-191936-14213d-ccdbdc -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 500 250" xml:space="preserve">
+        <rect fill="#ffffe0" x="0" y="0" width="100" height="220"/>,<rect fill="#80808d" x="100" y="0" width="100" height="220"/>,<rect fill="#191936" x="200" y="0" width="100" height="220"/>,<rect fill="#14213d" x="300" y="0" width="100" height="220"/>,<rect fill="#ccdbdc" x="400" y="0" width="100" height="220"/>
+        <text x="10" y="235" font-family="Arial" font-size="6" alignment-baseline="middle">next-profile-v1</text>
+        <text x="490" y="235" font-family="Arial" font-size="6" alignment-baseline="middle" text-anchor="end">https://coolors.co/ffffe0-80808d-191936-14213d-ccdbdc</text>
+      </svg>

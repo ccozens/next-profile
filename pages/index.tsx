@@ -1,65 +1,109 @@
-import Head from 'next/head'
-import Image from 'next/image'
-
-import styles from '@/pages/index.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import { arrowImage } from '../media/arrow/arrow';
+import styles from '@/pages/index.module.css';
 
 export default function Home() {
+
+  const chrisPhoto = 'https://res.cloudinary.com/dyvlh6dln/image/upload/c_scale,w_400/v1663849827/next-profile/chris_caa7fc.jpg';
+  const bgPhoto = 'https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80';
+  
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Chris Cozens</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header>
+        <div className={styles.name}>CHRIS <br></br>COZENS</div>
+        <div className={styles.nav}> nav</div>
+      </header>
       <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <div className={styles.bgWrap}>
+        <Image 
+        src={bgPhoto} 
+        alt="Worm's eye view of start at night by Ryan Babel, from unsplash"
+        layout="fill"
+        objectFit="cover"
+         />  
+        </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a href="https://vercel.com/new" className={styles.card}>
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className={styles.card}>
+          <Image className={styles.chrisPhoto} src={chrisPhoto} height={400} width={400} />
+          
+        <h1 className={styles.title}>Chris Cozens</h1>
+        <p className={styles.description}>Molecular biologist  <br>
+        </br> Frontend engineer</p>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+        <p>
+          Built with{' '}
+          <span>
+            <a
+              className={styles.footerLink}
+              href="https://www.next.js"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NEXT.js
+              {arrowImage()}
+            </a>
           </span>
-        </a>
+          &&  
+          {' '}
+          <span>
+            <a
+              className={styles.footerLink}
+              href="https://www.typescriptlang.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Typescript
+              {arrowImage()}
+            </a>
+          </span>
+          , hosted by{' '}
+          <span>
+            <a
+              className={styles.footerLink}
+              href="https://www.vercel.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Vercel
+              {arrowImage()}
+            </a>
+          </span>{' '}
+          &&{' '}
+          <span>
+            <a
+              className={styles.footerLink}
+              href="https://www.cloudinary.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cloudinary
+              {arrowImage()}
+            </a>
+          </span>{' '}
+          &&{' '}
+          <span>
+            <a
+              className={styles.footerLink}
+              href="https://www.sanity.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sanity
+              {arrowImage()}
+            </a>
+          </span>{' '}
+        </p>
       </footer>
     </div>
-  )
+  );
 }
