@@ -27,8 +27,8 @@ export default function Home() {
           <Image className={styles.chrisPhoto} src={chrisPhoto} height={400} width={400} />
           
         <h1 className={styles.title}>Chris Cozens</h1>
-        <p className={styles.description}>Molecular biologist  <br>
-        </br> Frontend engineer</p>
+        <p className={styles.descriptionTop}>Molecular biologist</p>
+        <p className={styles.descriptionBottom}> Frontend engineer</p>
         </div>
       </main>
 
