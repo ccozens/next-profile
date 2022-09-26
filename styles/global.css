@@ -23,6 +23,15 @@ header {
   top: 0px;
 }
 
+/* background image*/
+.bgWrap {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
 
 main {
   flex: 1;

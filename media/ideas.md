@@ -4,6 +4,7 @@
 - static gradient background
 - dark?
 - favicon
+- mol bio appears from left ; front eng apepars from right. Offset.
 - link transitions? https://css-tricks.com/css-link-hover-effects/
 
 # From syntax highlights 7 Jul 21
@@ -22,7 +23,7 @@ walterjenkins.com
 
 https://suhit.me/
 
-- they lover the [inter font](https://fonts.google.com/specimen/Inter)
+- they loved the [inter font](https://fonts.google.com/specimen/Inter)
 - gh/li logos have slight tilt on hover
 	=> 
 	
@@ -31,7 +32,7 @@ https://suhit.me/
   		transform: rotate(5deg);
 	}
 	```
-- [gh readne(https://github.com/SuhitAgarwal) simple
+- [gh readme(https://github.com/SuhitAgarwal) simple
 - animated hero with pic on front
 - email with folded paper plane "Shoot me an email!" and mailto:
 
@@ -78,4 +79,21 @@ https://mrtnvh.com/
       <script src="https://coolors.co/palette-widget/widget.js"></script>
       <script data-id="08338321356487679">new CoolorsPaletteWidget("08338321356487679", ["ffffe0","80808d","191936","14213d","ccdbdc"],"next-profile-v1"); </script>
       ```
+      
+      
+ #### Nav styling
+ scrolling 
+ [playground](https://codepen.io/pen/)
+ based on [effect 3](https://codepen.io/kathykato/pen/JjoebyL)
+ - at ul level, to remove bullets
+ .navList {
+    list-style: none;
+}
+
+- at li level, to
+.navItem {
+    display: inline; - display on one line
+    padding-left: 1em; - spacing between items
+    font-size: 1.6em; - make larger
+}
       
