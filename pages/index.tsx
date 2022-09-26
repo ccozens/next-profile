@@ -22,6 +22,7 @@ export default function Home() {
         alt="Worm's eye view of start at night by Ryan Babel, from unsplash"
         layout="fill"
         objectFit="cover"
+        priority={true}
          />  
         </div>
       <header>
