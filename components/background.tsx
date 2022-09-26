@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { GetStaticProps } from 'next';
 
 const Background = () => {
 
@@ -11,6 +12,7 @@ const Background = () => {
             alt="Worm's eye view of start at night by Ryan Babel, from unsplash"
             layout="fill"
             objectFit="cover"
+            priority={true}
             />  
         </div>
     )
