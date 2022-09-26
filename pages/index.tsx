@@ -5,8 +5,9 @@ import styles from '@/pages/index.module.css';
 
 export default function Home() {
 
-  const chrisPhoto = 'https://res.cloudinary.com/dyvlh6dln/image/upload/c_scale,w_400/v1663849827/next-profile/chris_caa7fc.jpg';
-  const bgPhoto = 'https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80';
+  const chrisPhoto = 'https://res.cloudinary.com/dyvlh6dln/image/upload/w_400,c_fill,ar_1:1,g_auto/v1663849827/next-profile/chris_caa7fc.jpg';
+  const bgPhoto = 'https://res.cloudinary.com/dyvlh6dln/image/upload/v1664008243/next-profile/ryan-hutton-Jztmx9yqjBw-unsplash_zzb28c.webp';
+  
   
   return (
     <div className={styles.container}>
@@ -15,13 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
-        <div className={styles.name}>CHRIS <br></br>COZENS</div>
-        <div className={styles.nav}> nav</div>
-      </header>
-      <main>
-
-        <div className={styles.bgWrap}>
+      <div className={styles.bgWrap}>
         <Image 
         src={bgPhoto} 
         alt="Worm's eye view of start at night by Ryan Babel, from unsplash"
@@ -29,6 +24,13 @@ export default function Home() {
         objectFit="cover"
          />  
         </div>
+      <header>
+        <div className={styles.name}>CHRIS <br></br>COZENS</div>
+        <div className={styles.nav}> nav</div>
+      </header>
+      <main>
+
+        
 
         <div className={styles.card}>
           <Image className={styles.chrisPhoto} src={chrisPhoto} height={400} width={400} />
