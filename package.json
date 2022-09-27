@@ -8,11 +8,15 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
+    "@portabletext/react": "^1.0.6",
+    "@sanity/image-url": "^1.0.1",
     "next": "latest",
+    "next-sanity": "^0.8.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "@sanity/cli": "^2.34.0",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "13.2.0",
     "@testing-library/user-event": "14.2.0",

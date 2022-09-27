@@ -155,3 +155,39 @@ https://vercel.com/integrations/sanity
 Clicked "Add sanity"
 Logged in with Github and followed prompts
 Done!
+
+```bash
+// install sanity globally if not already present
+npm i -g @sanity-cli
+
+// install sanity for nextjs tooling
+npm install next-sanity @portabletext/react @sanity/image-url
+
+// setup sanity
+sanity init --coupon syntaxfm2022
+
+
+```
+
+Options:
+Project name: cms-profile-site
+Your content will be stored in a dataset that can be public or private, depending on
+whether you want to query your content with or without authentication.
+The default dataset configuration has a public dataset named "production".
+? Use the default dataset configuration? Yes
+✔ Creating dataset
+? Project output path: /Users/learning/Documents/projects/next-profile/cms-profile-site
+? Select project template Blog (schema)
+✔ Bootstrapping files from template
+
+followed steps here https://vercel.com/guides/deploying-sanity-studio-with-vercel
+note vercel.json goes in nextjs app, not sanity
+
+modify .gitignore to not upload sanity node_modules:
+
+```
+cms-profile-site/node_modules
+```
+(`cms-profile-site` is the name of my sanity project)
+
+
