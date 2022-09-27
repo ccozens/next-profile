@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const arrowImage = () => {
     return (
-        <Image className="arrowImage"
+        <Image 
                 src={arrow}
                 height={12}
                 width={12}

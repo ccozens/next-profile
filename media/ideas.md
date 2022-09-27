@@ -72,16 +72,15 @@ https://mrtnvh.com/
 3. Simple penpot sketch ![penpot](penpot-next-profile-home-v1/f380b800-3a4f-11ed-a5c2-cf2300df1f4f/f380b801-3a4f-11ed-a5c2-cf2300df1f4f.svg)
 4. Colours - coolors.co 
 	Picked a few I like. [Initial palette](https://coolors.co/ffffe0-80808d-191936-14213d-ccdbdc)  
-	embedcode
 	
-	```javscript
-	<!-- Coolors Palette Widget -->
-      <script src="https://coolors.co/palette-widget/widget.js"></script>
-      <script data-id="08338321356487679">new CoolorsPaletteWidget("08338321356487679", ["ffffe0","80808d","191936","14213d","ccdbdc"],"next-profile-v1"); </script>
-      ```
-      
-      
- #### Nav styling
+	
+```javascript
+<!-- Coolors Palette Widget -->
+  <script src="https://coolors.co/palette-widget/widget.js"></script>
+  <script data-id="08338321356487679">new CoolorsPaletteWidget("08338321356487679", ["ffffe0","80808d","191936","14213d","ccdbdc"],"next-profile-v1"); </script>
+```
+
+#### Nav styling
  scrolling 
  [playground](https://codepen.io/pen/)
  based on [effect 3](https://codepen.io/kathykato/pen/JjoebyL)
@@ -96,4 +95,63 @@ https://mrtnvh.com/
     padding-left: 1em; - spacing between items
     font-size: 1.6em; - make larger
 }
+
+nav mapping:
+
+```typescript
+import Link from 'next/link';
+import styles from '@/styles/nav.module.css';
+
+
+const navList = ['Home', 'About', 'Projects', 'Contact'];
+    
+const navItems = navList.map((item) =>  (
+    <li className={styles.navItem}> 
+                    <Link href={item.toLowerCase()}>
+                        <a className={styles.anchor}>
+                        <span className={styles.hiddenAnchor} aria-hidden="true" data-content={item}> </span>
+                            {item}</a>
+                    </Link>
+                </li>
+));
+const NavMenu = () => {
+
+    return(
+        <div>
+            { navItems }
+        </div>
+    )
+}
+
+export { NavMenu };
+```
+
+one consequence of this was it creates a /home link, as opposed to / , which created a 404 not found error. Happily nextjs provides a [redirect key](https://nextjs.org/docs/api-reference/next.config.js/redirects) for next.config.js :
+
+
+```javascript
+async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ]
+  },
+  ```
       
+#### nav media query
+1. menu
+based on [codepen](https://codepen.io/himalayasingh/pen/GzZWyX)
+https://blog.logrocket.com/create-responsive-navbar-react-css/
+https://medium.com/@codewithmarish/how-to-create-a-responsive-navbar-in-next-js-5198a74fc496
+2. actual query
+
+
+
+# Sanity
+https://vercel.com/integrations/sanity
+Clicked "Add sanity"
+Logged in with Github and followed prompts
+Done!

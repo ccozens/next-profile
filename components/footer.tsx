@@ -16,9 +16,7 @@ const Footer = () => {
               NEXT.js
               {arrowImage()}
             </a>
-          </span>
-          &&  
-          {' '}
+          </span>{' && '}
           <span>
             <a
               className={styles.footerLink}
@@ -41,8 +39,7 @@ const Footer = () => {
               Vercel
               {arrowImage()}
             </a>
-          </span>{' '}
-          &&{' '}
+          </span>{' && '}
           <span>
             <a
               className={styles.footerLink}
@@ -53,8 +50,7 @@ const Footer = () => {
               Cloudinary
               {arrowImage()}
             </a>
-          </span>{' '}
-          &&{' '}
+          </span>{' && '}
           <span>
             <a
               className={styles.footerLink}
@@ -65,7 +61,7 @@ const Footer = () => {
               Sanity
               {arrowImage()}
             </a>
-          </span>{' '}
+          </span>
         </p>
       </footer>
     )

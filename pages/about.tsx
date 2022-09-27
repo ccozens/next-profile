@@ -10,8 +10,13 @@ const About = () => {
             <Background />
             <Header />
             
-            <div>About</div>
+            <section>
+                <h2>Chris as a front eng</h2>
+            </section>
 
+            <section>
+                <h2>Chris as a protein eng</h2>
+            </section>
             <Footer />
             
         </div>
