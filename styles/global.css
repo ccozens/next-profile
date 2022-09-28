@@ -11,6 +11,16 @@ body {
   box-sizing: border-box;
 }
 
+/* background image*/
+.bgWrap {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* header, main, footer from layout.tsx */
 header {
   width: 100vw;
   height: 100px;
@@ -23,22 +33,16 @@ header {
   top: 0px;
 }
 
-/* background image*/
-.bgWrap {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-
 main {
+  position: fixed;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  top: 100px;
+  bottom: 40px;
 }
 
 footer {
@@ -51,7 +55,8 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: #191936;
-  position: bottom fixed;
+  position: fixed;
+  bottom: 0px; 
 }
 
 

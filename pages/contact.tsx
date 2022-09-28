@@ -1,17 +1,10 @@
-import Header from '@/components/header';
-import Background from '@/components/background';
-import Footer from '@/components/footer';
-
+import Layout from "@/components/layout";
 const Contact = () => {
 
     return(
-        <div>
-            <Background />
-            <Header />
-            <h1>Contact</h1>
-
-            <Footer />
-        </div>
+        <Layout>
+            <p> say hi</p>
+        </Layout>
     )
 }
 

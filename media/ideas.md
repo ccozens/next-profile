@@ -79,6 +79,7 @@ https://mrtnvh.com/
   <script src="https://coolors.co/palette-widget/widget.js"></script>
   <script data-id="08338321356487679">new CoolorsPaletteWidget("08338321356487679", ["ffffe0","80808d","191936","14213d","ccdbdc"],"next-profile-v1"); </script>
 ```
+5. Basic layout: https://codepen.io/ccozens/pen/WNJXqNB
 
 #### Nav styling
  scrolling 
@@ -146,6 +147,7 @@ async redirects() {
 based on [codepen](https://codepen.io/himalayasingh/pen/GzZWyX)
 https://blog.logrocket.com/create-responsive-navbar-react-css/
 https://medium.com/@codewithmarish/how-to-create-a-responsive-navbar-in-next-js-5198a74fc496
+https://www.w3schools.com/css/css_dropdowns.asp
 2. actual query
 
 
@@ -190,4 +192,62 @@ cms-profile-site/node_modules
 ```
 (`cms-profile-site` is the name of my sanity project)
 
+git
+
+```bash
+git add . && git commit -m "added sanity"
+
+git push
+```
+
+Once Sanity Studio is deployed, you will need to add it's URL to Sanity’s CORS origins settings. You can do this from the command line from sanity project dir
+
+```
+// localhost for dev
+
+npm --prefix studio run cors:add -- http://localhost:3000 --credentials
+
+// actual URL for deployment
+sanity cors add https://your-url.vercel.app --credentials
+sanity cors add https://next-profile-v4mi.vercel.app/ --credentials
+
+```
+
+Deploy Sanity studio
+
+```bash
+sanity deploy
+```
+Called it: cms-profile-site.sanity.studio
+
+
+Create a new file called client.js in the root frontend folder. Open the file and put in the following:
+
+// client.js
+import sanityClient from '@sanity/client'
+
+export default sanityClient({
+  projectId: 'your-project-id', // you can find this in sanity.json
+  dataset: 'production', // or the name you chose in step 1
+  useCdn: true // `false` if you want to ensure fresh data
+})
+
+The projectId and dataset-name should be the same as those you'll find in your sanity.json file in the studio folder. Now you can import this client when you need to fetch some content from your Sanity project.
+
+Create .env.local in Next project root, as per https://github.com/vercel/next.js/blob/canary/examples/cms-sanity/.env.local.example
+
+Had to install Vercel CLI:
+
+```bash
+npm i -g vercel
+```
+
+then (in proj root) link to vercel
+
+```bash
+npx vercel link
+```
+**I reminded myself of the purpose here: done is better than perfect. Nextjs comment [you don't need a CMS unless you're hosting 100s of markdown files](https://nextjs.org/blog/markdown). I'm not. So, remove Sanity and host markdown locally**
+
+### Parsing markdown
 

@@ -50,17 +50,6 @@ const Footer = () => {
               Cloudinary
               {arrowImage()}
             </a>
-          </span>{' && '}
-          <span>
-            <a
-              className={styles.footerLink}
-              href="https://www.sanity.io"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Sanity
-              {arrowImage()}
-            </a>
           </span>
         </p>
       </footer>

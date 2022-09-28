@@ -1,25 +1,23 @@
-import Header from '@/components/header';
-import Background from '@/components/background';
-import Footer from '@/components/footer';
+import Layout from "@/components/layout";
 
 
 const About = () => {
 
     return(
-        <div>
-            <Background />
-            <Header />
+        <Layout>
+            
             
             <section>
                 <h2>Chris as a front eng</h2>
+                <div>beep</div>
             </section>
 
             <section>
                 <h2>Chris as a protein eng</h2>
             </section>
-            <Footer />
+           
             
-        </div>
+        </Layout>
     )
 }
 

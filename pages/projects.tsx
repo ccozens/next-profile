@@ -1,17 +1,10 @@
-import Header from '@/components/header';
-import Background from '@/components/background';
-import Footer from '@/components/footer';
-
+import Layout from "@/components/layout";
 const Projects = () => {
 
     return(
-        <div>
-            <Background />
-            <Header />
-            <h1>Projects</h1>
-
-            <Footer />
-        </div>
+        <Layout>
+            
+        </Layout>
     )
 }
 
