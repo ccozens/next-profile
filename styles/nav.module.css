@@ -1,36 +1,44 @@
 .navList {
-    list-style: none;
+  list-style: none;
 }
 
 .navItem {
-    display: inline;
-    padding-left: 1em;
-    font-size: 1.6em;
+  display: inline;
+  padding-left: 1em;
+  font-size: 1.6em;
 }
 
+.navLogo {
+  display: inline;
+  padding-left: 1em;
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+    transform: rotate(5deg);
+}
 
 a .hiddenAnchor {
-    position: absolute;
-    overflow: hidden;
-    transform: translateX(-100%);
-    transition: transform 275ms ease;
-    z-index: -1;
-  }
+  position: absolute;
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: transform 275ms ease;
+  z-index: -1;
+}
 
 a .hiddenAnchor::before {
-display: inline-block;
-content: attr(data-content);
-color: #FFFFE0;
-transform: translateX(100%);
-transition: transform 275ms ease;
-text-decoration: underline;
+  display: inline-block;
+  content: attr(data-content);
+  color: #ffffe0;
+  transform: translateX(100%);
+  transition: transform 275ms ease;
+  text-decoration: underline;
 }
 
 a:hover .hiddenAnchor {
-transform: translateX(0);
-z-index:1;
+  transform: translateX(0);
+  z-index: 1;
 }
 a:hover .hiddenAnchor::before {
-transform: translateX(0);
+  transform: translateX(0);
 }
-

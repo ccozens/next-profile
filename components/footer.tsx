@@ -28,7 +28,7 @@ const Footer = () => {
               {arrowImage()}
             </a>
           </span>
-          , hosted by{' '}
+          {', hosted by '}
           <span>
             <a
               className={styles.footerLink}
