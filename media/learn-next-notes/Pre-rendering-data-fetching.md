@@ -169,6 +169,8 @@ You don't need to understand what the code above is doing in order to learn Next
 #### Fetching the blog data
 Now that the blog data is parsed, we need to add it to our index page (pages/index.js). We can do this with a Next.js data fetching method called getStaticProps(). 
 
+https://wallis.dev/blog/nextjs-getstaticprops-and-getstaticpaths-with-typescript
+
 ##### Using Static Generation (getStaticProps()) for local data
 Now, we need to add an import for `getSortedPostsData` and call it inside `getStaticProps` in `pages/index.js`.
 
