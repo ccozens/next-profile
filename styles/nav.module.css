@@ -14,6 +14,12 @@
   transition: transform 0.2s;
 }
 
+.emailLogo {
+  display: inline;
+  padding-left: 1em;
+  
+}
+
 .logo:hover {
     transform: rotate(5deg);
 }
@@ -42,3 +48,5 @@ a:hover .hiddenAnchor {
 a:hover .hiddenAnchor::before {
   transform: translateX(0);
 }
+
+

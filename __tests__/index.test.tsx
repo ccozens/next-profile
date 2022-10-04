@@ -29,13 +29,9 @@ describe('Home', () => {
       name: 'Projects'
     })
 
-    const contactLink = screen.getByRole('link', {
-      name: 'Contact'
-    })
     expect(homeLink).toBeInTheDocument()
     expect(aboutLink).toBeInTheDocument()
     expect(projectsLink).toBeInTheDocument()
-    expect(contactLink).toBeInTheDocument()
   }),
 
   it('footer renders', () => {

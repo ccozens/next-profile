@@ -2,8 +2,13 @@ import Link from 'next/link';
 import styles from '@/styles/nav.module.css';
 import { githubLogo } from '../media/github-logo/githubLogo';
 import { linkedInLogo } from '../media/linkedin-logo/linkedInLogo';
+import {
+  emailLogoPlaceholder,
+  emailLogoHover,
+} from '../media/email/email';
+import { useState, MouseEvent } from 'react';
 
-const navList = ['Home', 'About', 'Projects', 'Contact'];
+const navList = ['Home', 'About', 'Projects'];
 
 const navItems = navList.map((item) => (
   <li className={styles.navItem} key={item}>
@@ -23,7 +28,15 @@ const navItems = navList.map((item) => (
 ));
 
 const NavMenu = () => {
+
+  // switch image on mouseover
+  const [emailLogo, setEmailLogo] = useState(emailLogoPlaceholder());
+
+  const mouseEnterEmail = (event: MouseEvent) => {setEmailLogo(emailLogoHover())};
+  const mouseLeaveEmail = (event: MouseEvent) => {setEmailLogo(emailLogoPlaceholder())};
+  
   return (
+
     <div>
       {navItems}
 
@@ -44,6 +57,17 @@ const NavMenu = () => {
       >
         {linkedInLogo()}
       </a>
+
+        <a
+          className={styles.emailLogo}
+          href="mailto:officechrisgarden@gmail.com?subject='website contact'"
+          onMouseEnter = {mouseEnterEmail}
+          onMouseLeave = {mouseLeaveEmail}
+        >
+          {emailLogo}
+        </a>
+
+      
     </div>
   );
 };
