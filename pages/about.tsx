@@ -65,6 +65,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const fields = ['title', 'date', 'content'];
   const sections = getItemsFromFile(about, fields);
 
+  
+
   return { props: { sections } };
 };
 

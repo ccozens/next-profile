@@ -3,16 +3,13 @@ import Image from 'next/image';
 import type { ReactElement } from 'react'
 import type { NextPageWithLayout } from './_app'
 import styles from '@/styles/index.module.css';
+import chrisPhoto from '../public/chris_caa7fc.webp';
 const Page: NextPageWithLayout = () => {
-  const chrisPhoto = 'https://res.cloudinary.com/dyvlh6dln/image/upload/w_400,c_fill,ar_1:1,g_auto/v1663849827/next-profile/chris_caa7fc.jpg';
-  
   
   return (
     <div className={styles.container}>
-     
         <div className={styles.card}>
-          <Image className={styles.chrisPhoto} src={chrisPhoto} height={400} width={400} />
-          
+          <Image className={styles.chrisPhoto} alt="Photo of Chris" src={chrisPhoto} />
         <h1 className={styles.title}>Chris Cozens</h1>
         <p className={styles.descriptionTop}>Molecular biologist</p>
         <p className={styles.descriptionBottom}> Frontend engineer</p>
@@ -29,4 +26,4 @@ Page.getLayout = function getLayout(page: ReactElement) {
   )
 }
 
-export default Page
+export default Page;

@@ -1,7 +1,7 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter';
-import {micromark} from 'micromark';
+import { micromark } from 'micromark';
 import { sanitize } from 'isomorphic-dompurify';
 
 
