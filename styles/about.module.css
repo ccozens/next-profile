@@ -1,7 +1,7 @@
 .aboutCard {
   margin: 2em;
   justify-content: space-around;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   width: 90vw;
   height: 30vh;
   padding: 40px 0px;
@@ -10,6 +10,8 @@
   grid-template: 25% 75% / repeat(5, 20%); /* 2 rows of 25% and 75% available space, 5 columns of 20% available space */
   align-items: center;
   justify-items: center;
+  background-color: rgba(0, 0, 0, 0.2); /* black background with low opacity to help text stand out*/
+
 }
 
 /* top section (mol bio) styling */

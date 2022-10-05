@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import Header from './header';
 import Background from './background';
 import Footer from './footer';

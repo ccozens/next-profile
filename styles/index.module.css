@@ -1,54 +1,38 @@
-/* description slidein */
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-
 .container {
   height: 100%;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-
-
-.descriptionTop {
-  margin-top: -1rem;
-  font-size: 1.5rem;
-  animation: 1s ease-in 0s slideInLeft;
-}
-
-.descriptionBottom {
-  margin-top: -1rem;
-  font-size: 1.5rem;
-  animation: 1s ease-in 0s slideInRight;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   width: 480px;
   padding-top: 40px;
   backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.2); 
+}
+
+.title {
+  margin: 0.4rem; /* override default margin (0.67em top+bottom, 0em left+right)  for h1 to reduce spacing*/ 
+}
+
+.descriptionContainer {
+  display: flex;
+}
+
+.description {
+  margin: auto;
+  padding: 0rem 1rem 1rem;
+  /* padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem; */
+  font-size: 1.5rem; 
+  display: inline;
 }
 
 .chrisPhoto {

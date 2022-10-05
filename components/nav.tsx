@@ -27,16 +27,19 @@ const navItems = navList.map((item) => (
   </li>
 ));
 
-const NavMenu = () => {
 
+const NavMenu = () => {
   // switch image on mouseover
   const [emailLogo, setEmailLogo] = useState(emailLogoPlaceholder());
 
-  const mouseEnterEmail = (event: MouseEvent) => {setEmailLogo(emailLogoHover())};
-  const mouseLeaveEmail = (event: MouseEvent) => {setEmailLogo(emailLogoPlaceholder())};
-  
-  return (
+  const mouseEnterEmail = (event: MouseEvent) => {
+    setEmailLogo(emailLogoHover());
+  };
+  const mouseLeaveEmail = (event: MouseEvent) => {
+    setEmailLogo(emailLogoPlaceholder());
+  };
 
+  return (
     <div>
       {navItems}
 
@@ -58,16 +61,14 @@ const NavMenu = () => {
         {linkedInLogo()}
       </a>
 
-        <a
-          className={styles.emailLogo}
-          href="mailto:officechrisgarden@gmail.com?subject='website contact'"
-          onMouseEnter = {mouseEnterEmail}
-          onMouseLeave = {mouseLeaveEmail}
-        >
-          {emailLogo}
-        </a>
-
-      
+      <a
+        className={styles.emailLogo}
+        href="mailto:officechrisgarden@gmail.com?subject='website contact'"
+        onMouseEnter={mouseEnterEmail}
+        onMouseLeave={mouseLeaveEmail}
+      >
+        {emailLogo}
+      </a>
     </div>
   );
 };
