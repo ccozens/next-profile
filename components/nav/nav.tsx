@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import styles from '@/styles/nav.module.css';
-import { githubLogo } from '../media/github-logo/githubLogo';
-import { linkedInLogo } from '../media/linkedin-logo/linkedInLogo';
+import { githubLogo } from './media/github-logo/githubLogo';
+import { linkedInLogo } from './media/linkedin-logo/linkedInLogo';
 import {
   emailLogoPlaceholder,
   emailLogoHover,
-} from '../media/email/email';
+} from './media/email/email';
 import { useState, MouseEvent } from 'react';
 
 const navList = ['Home', 'About', 'Projects'];

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import Header from './header';
 import Background from './background';
-import Footer from './footer';
+import Footer from './footer/footer';
 import Head from 'next/head';
 
 type Props = {

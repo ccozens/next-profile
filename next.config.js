@@ -1,5 +1,6 @@
 
 module.exports = {
+  // enables cloudinary loading from my account
     images: {
       remotePatterns: [
         {
@@ -9,6 +10,7 @@ module.exports = {
         }
       ],
     },
+    // redirects '/home' to '/'
     async redirects() {
       return [
         {
@@ -18,5 +20,14 @@ module.exports = {
         },
       ]
     },
-
+    // enables SVGR for SVG loading
+    webpack(config) {
+      config.module.rules.push({
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ['@svgr/webpack', 'url-loader'],
+      })
+  
+      return config
+    },
   }

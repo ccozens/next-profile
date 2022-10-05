@@ -249,5 +249,58 @@ npx vercel link
 ```
 **I reminded myself of the purpose here: done is better than perfect. Nextjs comment [you don't need a CMS unless you're hosting 100s of markdown files](https://nextjs.org/blog/markdown). I'm not. So, remove Sanity and host markdown locally**
 
-### Parsing markdown
+### Loading svgs into Nextjs
+[dev article](https://dev.to/dolearning/importing-svgs-to-next-js-nna)  
+[svgr page](https://react-svgr.com/docs/next/)
+
+1. install svgr: ```npm -i --save-dev svgr```
+2. amend `next.config.js`
+
+```javascript
+webpack(config) {
+      config.module.rules.push({
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ['@svgr/webpack'],
+      })
+  
+      return config
+    },
+```
+
+3. This broke extant imports, as it now converts all svg imports to React components. To allow this, install `url-loader` and update `next.config.js` again to load SVGs as either React compoents or urls:
+
+```javascript
+webpack(config) {
+      config.module.rules.push({
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ['@svgr/webpack', 'url-loader'], // addition here
+      })
+  
+      return config
+    },
+```
+
+(note webpack say url-loader is deprecated, but there seem to be problems [moving to new Asset Modules with nextjs](https://github.com/vercel/next.js/discussions/36981))
+
+4. import svg into projectLogos.tsx, eg ```import TypescriptLogo from './typescript-tweaked.svg';```
+5. store in exported object: ```export const techLogos = { typescript: TypescriptLogo };```
+6. import into project.tsx: ```import { techLogos } from "./media/projectLogos";```
+7. use:
+
+```typescript
+const ProjectPanels = () => {
+    
+    return (
+        <div>
+            <techLogos.typescript />
+        </div>
+    );
+};
+
+export default ProjectPanels;
+
+```
+
 

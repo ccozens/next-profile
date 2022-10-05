@@ -1,11 +1,16 @@
 import Layout from "@/components/layout";
+import ProjectPanels from "@/components/projects/project";
+import styles from '../styles/projects.module.css';
+
+
+
 const Projects = () => {
+
 
     return(
         <Layout>
-            <p> Scrollbar at top side with full width horizontal anchors for sections.</p>
-            <p> web - this, teamhub, mol-bio-tools</p>
-            <p> Python section? 3 word generator, fitbit analysis</p>
+            <div className={styles.example}></div>
+            <ProjectPanels />
         </Layout>
     )
 }

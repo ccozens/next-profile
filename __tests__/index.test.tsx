@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import Home from '@/pages/index'
-import NavMenu from '@/components/nav';
-import Footer from '@/components/footer';
+import NavMenu from '@/components/nav/nav';
+import Footer from '@/components/footer/footer';
 
 describe('Home', () => {
   it('renders a name as heading', () => {

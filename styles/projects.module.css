@@ -1,0 +1,13 @@
+.projectCard {
+    margin: 2em;
+    justify-content: space-around;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    width: 40vw;
+    height: 30vh;
+    padding: 40px 0px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    /* align-items: center; */
+    /* justify-items: center; */
+    background-color: rgba(0, 0, 0, 0.2); /* black background with low opacity to help text stand out*/
+  }
