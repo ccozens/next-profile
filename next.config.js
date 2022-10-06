@@ -1,5 +1,10 @@
 
 module.exports = {
+  // auto-set land attribute when html generated
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
   // enables cloudinary loading from my account
     images: {
       remotePatterns: [
