@@ -5,6 +5,7 @@ import styles from '@/styles/nav.module.css';
 export const githubLogo = () => {
     return (
         <Image 
+        alt="github symbol"
                 className={styles.logo}
                 src={github}
                 height={25}

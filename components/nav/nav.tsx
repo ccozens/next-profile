@@ -14,7 +14,6 @@ const navList = ['Home', 'About', 'Projects'];
 const navItems = navList.map((item) => (
   <li className={styles.navItem} key={item}>
     <ActiveLink activeClassName={styles.active} href={item.toLowerCase()}>
-      
       <a className={styles.anchor}>
         <span
           className={styles.hiddenAnchor}

@@ -15,8 +15,6 @@ describe('Home', () => {
   }),
 
   /* it('navbar renders', () => {
-    const useRouter = jest.spyOn(require('next/router'), 'useRouter');
-
     render(<NavMenu />)
 
     const homeLink = screen.getByRole('link', {
@@ -31,11 +29,6 @@ describe('Home', () => {
       name: 'Projects'
     })
 
-    useRouter.mockImplementationOnce(() => ({
-      asPath: '/home',
-      isReady: '/home'
-    }));
-    
     expect(homeLink).toBeInTheDocument()
     expect(aboutLink).toBeInTheDocument()
     expect(projectsLink).toBeInTheDocument()

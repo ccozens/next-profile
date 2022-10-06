@@ -4,6 +4,7 @@ import Image from 'next/image';
 export const arrowImage = () => {
     return (
         <Image 
+            alt="Arrow pointng up and right in square"
                 src={arrow}
                 height={12}
                 width={12}

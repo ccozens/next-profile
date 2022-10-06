@@ -2,14 +2,13 @@ import Image from 'next/image';
 
 const Background = () => {
 
-    // const bgPhoto = 'https://res.cloudinary.com/dyvlh6dln/image/upload/v1664008243/next-profile/ryan-hutton-Jztmx9yqjBw-unsplash_zzb28c.webp';
-    const bgPhoto = 'https://res.cloudinary.com/dyvlh6dln/image/upload/e_brightness:-20/v1664008243/next-profile/ryan-hutton-Jztmx9yqjBw-unsplash_zzb28c.jpg';
+    const bgPhoto = 'https://res.cloudinary.com/dyvlh6dln/image/upload/v1664008243/next-profile/ryan-hutton-Jztmx9yqjBw-unsplash_zzb28c.webp';
 
     return (
         <div>
             <Image 
             src={bgPhoto} 
-            alt="Worm's eye view of start at night by Ryan Babel, from unsplash"
+            alt="Worm's eye view of stars at night by Ryan Babel, from unsplash"
             layout="fill"
             objectFit="cover"
             priority={true}

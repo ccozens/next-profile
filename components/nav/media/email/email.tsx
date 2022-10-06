@@ -6,6 +6,7 @@ import styles from '@/styles/nav.module.css';
 export const emailLogoPlaceholder = () => {
     return (
         <Image 
+                alt="email symbol"
                 className={styles.logo}
                 src={emailPlaceholder}
                 height={25}
@@ -17,6 +18,7 @@ export const emailLogoPlaceholder = () => {
 export const emailLogoHover = () => {
     return (
         <Image 
+        alt="writing email symbol"
                 className={styles.logo}
                 src={emailHover}
                 height={25}

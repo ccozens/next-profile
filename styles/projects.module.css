@@ -1,12 +1,13 @@
 .projectHeading {
   margin: 2em;
   backdrop-filter: blur(20px);
-  background-color: rgba(0, 0, 0, 0.2); /* black background with low opacity to help text stand out*/
+  background-color: rgba(255, 255, 255, 0.2); /* black background with low opacity to help text stand out*/
   width: 90%;
+  padding: 0em 5em;
 }
 
 .projectHeading > p {
-  text-align: justify;
+  text-align: center;
 }
 
 /* flex grid magic https://codepen.io/irinakramer/pen/oNmxYm */

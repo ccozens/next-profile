@@ -16,8 +16,7 @@ const Projects = ({
   return (
     <Layout>
         <div className={styles.projectHeading}> 
-            <h1>Projects</h1>
-            <p>I only began coding seriously in March 2022. I was already using Python for data analysis (eg <strong>link to when made</strong> Fitbit data analysis), and started frontend engineering in May 2022. These projects have all been completed in that time frame.</p>
+            <p>I began coding seriously in March 2022. I was already using Python for data analysis, and started frontend engineering in May 2022. These projects have all been undertaken since then. I can currently work in Python, Javascript and Typescript.</p>
         </div>
       <div className={styles.grid}>
 
