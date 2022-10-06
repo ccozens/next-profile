@@ -303,4 +303,13 @@ export default ProjectPanels;
 
 ```
 
+# Project images
 
+1. whole screen screen shot (apple+3)
+2. upload to cloudinary/projects
+3. crop bar from top (h: 1637, gravity_Y: 163):  ```c_crop,h_1637,w_2880,y_163```  
+4. scale to fit container 500 px wide and maintain quality 100:  ```c_limit,q_100,w_500```
+5. format to webP: ```.webp```
+eg
+https://res.cloudinary.com/dyvlh6dln/image/upload/c_crop,h_1637,w_2880,y_163/c_limit,q_100,w_500/v1665056519/next-profile/projects/mol-bio-tools.webp
+6. For convenience, download and store in public/
