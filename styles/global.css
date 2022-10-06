@@ -11,24 +11,14 @@ body {
   box-sizing: border-box;
 }
 
-/* background image*/
-.bgWrap {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
 /* header, main, footer from layout.tsx */
 header {
   width: 100vw;
   height: 100px;
-  opacity: 0.85;
   border-bottom: 1px solid #eaeaea;
   display: flex;
   align-items: center;
-  background-color: #191936;
+  background-color: rgba(25, 25, 54, 0.9); /* rgba allows slight bg opacity while keeping text sharp */
   position: sticky;
   top: 0px;
 }
@@ -47,14 +37,15 @@ main {
 
 footer {
   width: 100vw;
-  height: 40px;
+  height: 30px;
   opacity: 0.85;
   border-top: 1px solid #eaeaea;
   display: flex;
-  opacity: 0.9;
   justify-content: center;
   align-items: center;
-  background-color: #191936;
+  /* opacity: 0.9;
+  background-color: #191936; */
+  background-color: rgba(25, 25, 54, 0.9);
   position: fixed;
   bottom: 0px; 
 }

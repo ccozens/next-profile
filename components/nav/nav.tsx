@@ -7,12 +7,14 @@ import {
   emailLogoHover,
 } from './media/email/email';
 import { useState, MouseEvent } from 'react';
+import ActiveLink from './activeLink';
 
 const navList = ['Home', 'About', 'Projects'];
 
 const navItems = navList.map((item) => (
   <li className={styles.navItem} key={item}>
-    <Link href={item.toLowerCase()}>
+    <ActiveLink activeClassName={styles.active} href={item.toLowerCase()}>
+      
       <a className={styles.anchor}>
         <span
           className={styles.hiddenAnchor}
@@ -23,7 +25,7 @@ const navItems = navList.map((item) => (
         </span>
         {item}
       </a>
-    </Link>
+    </ActiveLink>
   </li>
 ));
 

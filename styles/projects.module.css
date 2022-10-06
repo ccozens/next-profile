@@ -1,13 +1,76 @@
+.projectHeading {
+  margin: 2em;
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.2); /* black background with low opacity to help text stand out*/
+  width: 90%;
+}
+
+.projectHeading > p {
+  text-align: justify;
+}
+
+/* flex grid magic https://codepen.io/irinakramer/pen/oNmxYm */
+.grid {
+  max-height: 100%; /* fits in space between header and footer */
+  overflow: auto; /* scrollbar loads if needed*/
+  display: flex;
+  flex-flow: row; 
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .projectCard {
     margin: 2em;
     justify-content: space-around;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    width: 40vw;
-    height: 30vh;
-    padding: 40px 0px;
+    flex-basis: 45%;
+    padding: 10px 0px;
     backdrop-filter: blur(20px);
+    align-items: center; /* centres and prevents stretching */
+    background-color: rgba(255, 255, 255, 0.2); /* white, low opacity background helps boxes stand out*/
     display: flex;
-    /* align-items: center; */
-    /* justify-items: center; */
-    background-color: rgba(0, 0, 0, 0.2); /* black background with low opacity to help text stand out*/
+    flex-wrap: wrap;
   }
+
+  .projectMedia {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .projectImage {
+    width: 70%;
+  }
+
+  .techLogos {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+    gap: 1em;
+    width: 8%;
+  }
+
+  .projectTitle {
+    font-size: 2em;
+    margin: 0.2em;
+  }
+
+  .projectBlurb {
+    width: 90%;
+    text-align: justify;
+  }
+
+
+  /* scrollbar background formatting */
+.grid::-webkit-scrollbar
+{
+  width: 10px;
+	background-color: #c4c4c4;
+}
+
+/* scrollbar thumb formatting */
+.grid::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #7a7a7a;
+}

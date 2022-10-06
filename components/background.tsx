@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { GetStaticProps } from 'next';
 
 const Background = () => {
 
-    const bgPhoto = 'https://res.cloudinary.com/dyvlh6dln/image/upload/v1664008243/next-profile/ryan-hutton-Jztmx9yqjBw-unsplash_zzb28c.webp';
+    // const bgPhoto = 'https://res.cloudinary.com/dyvlh6dln/image/upload/v1664008243/next-profile/ryan-hutton-Jztmx9yqjBw-unsplash_zzb28c.webp';
+    const bgPhoto = 'https://res.cloudinary.com/dyvlh6dln/image/upload/e_brightness:-20/v1664008243/next-profile/ryan-hutton-Jztmx9yqjBw-unsplash_zzb28c.jpg';
 
     return (
         <div>
