@@ -1,11 +1,11 @@
-.navList {
-  list-style: none;
-}
-
 .navItem {
   display: inline;
   padding: 0.2em 0.75em;
   font-size: 1.6em;
+}
+
+.dropdownContainer, .dropdownHidden, .hamburger {
+  display: none;
 }
 
 .active {
@@ -15,6 +15,8 @@
 }
 
 .navLogo {
+  height: 25px;
+  width: 25px;
   display: inline;
   padding: 0em 0.75em;
   transition: transform 0.2s;
@@ -24,10 +26,31 @@
   display: inline;
   padding-left: 0.75em;
   padding-right: 1em;
+  /* sets relative to its initial position, and enables absolulte positiong for children*/
+  position: relative;
+  top: -10px;
+  left: 0px;
+}
+
+.emailLogoPlaceholder {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+.emailLogoPlaceholder:hover {
+  opacity: 0;
+}
+
+.emailLogoHover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .logo:hover {
-    transform: rotate(5deg);
+  transform: rotate(5deg);
 }
 
 a .hiddenAnchor {
@@ -55,6 +78,53 @@ a:hover .hiddenAnchor::before {
   transform: translateX(0);
 }
 
+@media screen and (max-width: 1024px) {
+  .hamburger {
+    height: 40px;
+    width: 40px;
+    border-radius: 5%;
+    background-color: #eaeaea;
+    cursor: pointer;
+    display: inline;
+  }
 
+  .hamburger:hover {
+    outline: thick double white;
+  }
 
+  .navItem {
+    display: none;
+  }
 
+  .navLogo {
+    height: 40px;
+    width: 40px;
+  }
+
+  .dropdownContainer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 20vw;
+    z-index: 5;
+    background-color: rgba(25, 25, 25, 0.9);
+  }
+
+  .dropDownItem {
+    display: block;
+    padding: 0.4em;
+    margin: 0.5em;
+    background-color: rgba(234, 234, 234, 0.5);
+    font-size: 1.2em;
+    text-align: center;
+    z-index: 5;  }
+
+  .dropDownItem:hover {
+    background-color: rgba(234, 234, 234, 0.9);
+    color: rgba(25, 25, 25);
+    outline: solid 1px rgba(234, 234, 234, 1);
+  }
+}

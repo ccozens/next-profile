@@ -5,6 +5,7 @@
   width: 90%;
   padding: 0em 3em;
   font-size: 1.2em;
+  border-radius: 0.3em;
 }
 
 .projectHeading > p {
@@ -23,6 +24,7 @@
 
 .projectCard {
     margin: 2em;
+    border-radius: 0.3em;
     justify-content: space-around;
     flex-basis: 45%;
     padding: 10px 0px;
@@ -31,6 +33,12 @@
     background-color: rgba(255, 255, 255, 0.3); /* white, low opacity background helps boxes stand out*/
     display: flex;
     flex-wrap: wrap;
+    transition: 0.1s;
+  }
+
+  .projectCard:hover {
+    outline: ridge 5px rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.3);
   }
 
   .projectMedia {
@@ -38,9 +46,9 @@
     width: 90%;
     justify-content: space-between;
   }
-
-  .projectImage {
-    width: 70%;
+  
+  .projectImage:hover {
+    outline: solid 2px white;
   }
 
   .techLogos {

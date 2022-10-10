@@ -9,7 +9,6 @@ import CSSLogo from './CSS3_logo_and_wordmark.svg';
 
 import Image from 'next/image';
 import styles from '../../../styles/projects.module.css';
-import { logDOM } from '@testing-library/react';
 
 const techLogos = {
   github: { alt: 'Github logo', logo: GithubLogo, url: 'https://github.com/ccozens' },

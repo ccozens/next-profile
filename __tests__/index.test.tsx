@@ -14,7 +14,10 @@ describe('Home', () => {
     expect(heading).toBeInTheDocument()
   }),
 
-  /* it('navbar renders', () => {
+  /* 
+  // T-56 when properly look at mocking
+  it('navbar renders', () => {
+    
     render(<NavMenu />)
 
     const homeLink = screen.getByRole('link', {
@@ -33,24 +36,24 @@ describe('Home', () => {
     expect(aboutLink).toBeInTheDocument()
     expect(projectsLink).toBeInTheDocument()
   }), */
-
+  
   it('footer renders', () => {
     render(<Footer />)
 
     const nextLink = screen.getByRole('link', {
-      name: 'NEXT.js'
+      name: 'NEXT.js Arrow pointing up and right in square'
     })
 
     const typescriptLink = screen.getByRole('link', {
-      name: 'Typescript'
+      name: 'Typescript Arrow pointing up and right in square'
     })
 
     const vercelLink = screen.getByRole('link', {
-      name: 'Vercel'
+      name: 'Vercel Arrow pointing up and right in square'
     })
 
     const cloudinaryLink = screen.getByRole('link', {
-      name: 'Cloudinary'
+      name: 'Cloudinary Arrow pointing up and right in square'
     })
     expect(nextLink).toBeInTheDocument()
     expect(typescriptLink).toBeInTheDocument()

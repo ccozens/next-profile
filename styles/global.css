@@ -32,22 +32,21 @@ main {
   align-items: center;
   width: 100vw;
   top: 100px;
-  bottom: 40px;
+  bottom: 20px;
 }
 
 footer {
   width: 100vw;
-  height: 30px;
+  height: 20px;
   opacity: 0.85;
   border-top: 1px solid #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* opacity: 0.9;
-  background-color: #191936; */
   background-color: rgba(25, 25, 54, 0.9);
   position: fixed;
   bottom: 0px; 
+  font-size: 0.8rem;
 }
 
 
