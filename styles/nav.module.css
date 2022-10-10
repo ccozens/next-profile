@@ -86,6 +86,7 @@ a:hover .hiddenAnchor::before {
     background-color: #eaeaea;
     cursor: pointer;
     display: inline;
+    z-index: 100;
   }
 
   .hamburger:hover {
@@ -103,13 +104,14 @@ a:hover .hiddenAnchor::before {
 
   .dropdownContainer {
     position: fixed;
+    top: 5em;
+    right: 3em;
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
     list-style: none;
-    width: 20vw;
-    z-index: 5;
+    width: 25vw;
     background-color: rgba(25, 25, 25, 0.9);
   }
 
@@ -120,11 +122,37 @@ a:hover .hiddenAnchor::before {
     background-color: rgba(234, 234, 234, 0.5);
     font-size: 1.2em;
     text-align: center;
-    z-index: 5;  }
+   }
 
   .dropDownItem:hover {
     background-color: rgba(234, 234, 234, 0.9);
     color: rgba(25, 25, 25);
     outline: solid 1px rgba(234, 234, 234, 1);
   }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .dropdownContainer {
+    position: fixed;
+    top: 5em;
+    left: 50vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0em;
+    padding: 0;
+    list-style: none;
+    width: 50vw;
+    background-color: rgba(25, 25, 25, 0.9);
+  }
+
+  .dropDownItem {
+    display: block;
+    padding: 0.4em;
+    margin: 0.5em;
+    background-color: rgba(234, 234, 234, 0.5);
+    font-size: 2em;
+    text-align: center;
+   }
 }

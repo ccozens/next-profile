@@ -6,7 +6,7 @@ import styles from '@/styles/nav.module.css';
 export const hamburgerPlaceholder = () => {
     return (
         <Image 
-                alt="email symbol"
+                alt="hamburger menu"
                 className={styles.hamburger}
                 src={hamburgerPlaceholderSVG}
                 height={25}
@@ -18,7 +18,7 @@ export const hamburgerPlaceholder = () => {
 export const hamburgerActive = () => {
     return (
         <Image 
-        alt="writing email symbol"
+        alt="expanded hamburger menu"
                 className={styles.hamburger}
                 src={hamburgerActiveSVG}
                 height={25}
