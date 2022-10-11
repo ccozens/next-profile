@@ -1,50 +1,111 @@
-.aboutCard {
-  margin: 2em;
-  justify-content: space-around;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  width: 90vw;
-  height: 30vh;
-  padding: 40px 0px;
-  backdrop-filter: blur(20px);
-  display: grid;
-  grid-template: 25% 75% / repeat(5, 20%); /* 2 rows of 25% and 75% available space, 5 columns of 20% available space */
-  align-items: center;
-  justify-items: center;
-  background-color: rgba(0, 0, 0, 0.2); /* black background with low opacity to help text stand out*/
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+    grid-template-rows: repeat(3, 1fr, 2fr, 2fr); /* 3 rows: 0.2, 0.4, 0.4 */
+    grid-template-areas: 
+        "facts about1 about1"
+        "facts about2 about3"
+        "facts about4 about5";
+    /* gap: 2%; */
+    
 }
 
-/* top section (mol bio) styling */
-.molBioTitle {
-  grid-area: 1 / 2 / 2 / span 4; /* row 1 only, columns 2-5 */
+.grid1 {
+    grid-area: facts;
 }
 
-.molBioText {
-  grid-area: 2 / 2 / 3 / span 4; /* row 2 only, columns 2-5 */
-  padding: 1em;
+.grid2 {
+    grid-area: about1;
 }
 
-.molBioImgContainer {
-  grid-area: 1 / 1 / 3; /* rows 1+2, col 1 only */
+.grid3 {
+    grid-area: about2;
 }
 
-/* bottom section (frontend) styling */
-.frontendTitle {
-  grid-area: 1 / 1 / 2 / span 4; /* row 1 only, columns 1-4 */
+.grid4 {
+    grid-area: about3;
 }
 
-.frontendText {
-  grid-area: 2 / 1 / 2 / span 4; /* row 2 only, columns 1-4 */
-  padding: 1em;
+.grid5 {
+    grid-area: about4;
 }
 
-.frontendImgContainer {
-  grid-area: 1 / 5 / 3; /* rows 1+2, col 5 only */
-  align-items: center;
-  justify-items: center;
+.grid6 {
+    grid-area: about5;
 }
 
-/* image positioning */
-.frontendImg, .molBioImg {
-  object-position: center;
-  object-fit: none;
+.grid1, .grid2, .grid3, .grid4, .grid5, .grid6 {
+    margin: 1em;
+    border-radius: 0.3em;
+    padding: 1em;
+    backdrop-filter: var(--card-blur);
+    background-color: var(--semiOpaque-bg);
+    border: var(--faintBorder);
+    transition: 0.1s;
 }
+
+.roleHeading {
+    font-size: 1.8em;
+    font-weight: semi-bold;
+}
+
+.roleContent {
+    font-size: 1.1em;
+    margin-left: 0.7em;
+}
+
+.roleLink:hover, .skillLink:hover {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.skillBlurb {
+    text-align: center;
+    line-height: 1.5;
+    margin: auto;
+}
+
+.skillHeading {
+    font-size: 1.2em;
+    font-weight: semi-bold;
+}
+
+.skillContent, .roleContent {
+    line-height: 1.2; 
+}
+
+.skillContent > li {
+    padding-bottom: 0.3em;
+}
+
+.skillLink {
+    /* color: #A5C9FF; */
+    /* font-weight: bold; */
+    color: #c4c4c4;
+}
+
+.grid1:hover, .grid2:hover, .grid3:hover, .grid4:hover, .grid5:hover, .grid6:hover {
+    outline: ridge 2px rgba(255, 255, 255, 0.8);
+    background-color: rgba(25, 25, 54, 0.5);
+  }
+
+  
+  @media screen and (max-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1fr);
+        grid-template-areas: 
+            "about1"
+            "facts"
+            "about2" 
+            "about3"
+            "about4"
+            "about5";
+        gap: 2%;
+        overflow: auto;
+        text-align: center;
+    }
+  }

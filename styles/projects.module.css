@@ -1,7 +1,8 @@
 .projectHeading {
   margin: 2em;
-  backdrop-filter: blur(20px);
-  background-color: rgba(255, 255, 255, 0.3); /* white, low opacity background helps boxes stand out*/
+  background-color: var(--semiOpaque-bg);
+  border: var(--faintBorder);
+  border: var(--faintBorder);
   width: 90%;
   padding: 0em 3em;
   font-size: 1.2em;
@@ -28,17 +29,18 @@
     justify-content: space-around;
     flex-basis: 45%;
     padding: 10px 0px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: var(--card-blur);
     align-items: center; /* centres and prevents stretching */
-    background-color: rgba(255, 255, 255, 0.3); /* white, low opacity background helps boxes stand out*/
+    background-color: var(--semiOpaque-bg);
+    border: var(--faintBorder);
     display: flex;
     flex-wrap: wrap;
     transition: 0.1s;
   }
 
-  .projectCard:hover {
-    outline: ridge 5px rgba(255, 255, 255, 0.8);
-    background-color: rgba(255, 255, 255, 0.3);
+  .projectHeading:hover, .projectCard:hover {
+      outline: ridge 3px rgba(255, 255, 255, 0.8);
+      background-color: rgba(25, 25, 54, 0.5);
   }
 
   .projectMedia {

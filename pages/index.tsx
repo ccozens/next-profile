@@ -4,6 +4,7 @@ import type { ReactElement } from 'react';
 import type { NextPageWithLayout } from './_app';
 import styles from '@/styles/index.module.css';
 import chrisPhoto from '../public/chris_caa7fc.webp';
+
 const Page: NextPageWithLayout = () => {
   return (
     <div className={styles.container}>
@@ -14,8 +15,7 @@ const Page: NextPageWithLayout = () => {
           src={chrisPhoto}
         />
         <h1 className={styles.title}>Chris Cozens</h1>
-        {/* <p className={styles.descriptionTop}>Molecular biologist</p> */}
-        {/* <p className={styles.descriptionBottom}> Frontend engineer</p> */}
+        
         <div className={styles.descriptionContainer}>
           <p className={styles.description}>Scientist</p>
           <p className={styles.description}>Innovator</p>
