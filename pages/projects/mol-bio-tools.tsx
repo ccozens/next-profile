@@ -10,7 +10,7 @@ const MolBioTools = ({
   return (
     <Layout>
       <div className={styles.readme}> 
-      <div className={styles.projectCard}>
+      <div className={`${styles.projectCard} ${styles.subProjectCard}`}>
         <div
           className={styles.projectBlurb}
           dangerouslySetInnerHTML={{ __html: item }}

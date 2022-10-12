@@ -42,8 +42,6 @@ const Projects = () => {
               <a
               className={styles.projectLink}
                 href={`projects/next-profile`}
-                target="_blank"
-                rel="noopener noreferrer"
               > About site </a>
               </figcaption>
             </figure>
@@ -73,8 +71,6 @@ const Projects = () => {
               <a
               className={styles.projectLink}
                 href={`projects/mol-bio-tools`}
-                target="_blank"
-                rel="noopener noreferrer"
               > About site </a>
               </figcaption>
             </figure>

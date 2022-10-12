@@ -15,12 +15,17 @@ module.exports = {
         }
       ],
     },
-    // redirects '/home' to '/'
+    // redirects from within subprojects to main pages
     async redirects() {
       return [
         {
-          source: '/home',
-          destination: '/',
+          source: '/projects/about',
+          destination: '/about',
+          permanent: true,
+        },
+        {
+          source: '/projects/projects',
+          destination: '/projects',
           permanent: true,
         },
       ]

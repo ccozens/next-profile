@@ -140,6 +140,14 @@
   text-align: justify;
 }
 
+.projectBlurb > a {
+  text-decoration: underline;
+}
+
+.subProjectCard {
+  
+}
+
 .readme {
   overflow: auto;
 }

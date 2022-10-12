@@ -16,10 +16,11 @@ import { useState, useEffect, MouseEvent } from 'react';
 const navList = ['Home', 'About', 'Projects'];
 
 const navItems = navList.map((item) => (
+
   <li className={styles.navItem} key={item}>
     <ActiveLink
       activeClassName={styles.active}
-      href={item.toLowerCase()}
+      href={item === 'Home' ? '/' : item.toLowerCase()} // set 'Home' from navList to '/' in link, else return item as all lowercase
     >
       <a className={styles.anchor}>
         <span
