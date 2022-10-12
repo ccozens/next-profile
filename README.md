@@ -1,29 +1,9 @@
-# Next.js + Jest
+# Profile site with NEXTjs and CSS
 
-This example shows how to configure Jest to work with Next.js.
+## Purpose
+- showcase that I can build websites
+- repository for work I want to share
+- practice ground
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
-
-## How to Use
-
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
-
-In your terminal, run the following command:
-
-```bash
-npx create-next-app --example with-jest with-jest-app
-```
-
-```bash
-yarn create next-app --example with-jest with-jest-app
-```
-
-```bash
-pnpm create next-app --example with-jest with-jest-app
-```
-
-## Run Jest Tests
-
-```bash
-npm test
-```
+## About
+This is this my second website. I switched from CRA to NEXT.js and from JavaScript to Typescript as a learning experience in more robust technologies, and from Tailwind to CSS to improve my understanding of native CSS. I have found the switch from React/JS to Next/TS a significant step in utility, especially in regards building more than just an SPA, and in TypeScript helping prevent compilation errors. I will continue in both for the timebeing to cement learning.

@@ -90,3 +90,13 @@ export function getItemsFromFile(filename: string, fields: string[] = []) {
 */
 
 
+export async function getReadme(fileUrl: string) {
+  const fileFetch = await fetch(fileUrl) // fetch md from github
+  .then((response) => response.text())  // parse response into text
+  
+  const htmlContent = micromark(fileFetch); // convert markdown content to html
+  const checkedHtml = sanitize(htmlContent); // check HTML is safe to use with dangerouslySetInnerHTML
+  // const checkedHtml = 'beep';
+  return checkedHtml;
+};
+
