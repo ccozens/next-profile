@@ -3,7 +3,7 @@ import Image from 'next/image';
 import type { ReactElement } from 'react';
 import type { NextPageWithLayout } from './_app';
 import styles from '@/styles/index.module.css';
-import chrisPhoto from '../public/chris_caa7fc.webp';
+// import chrisPhoto from '../public/chris_caa7fc.webp';
 
 const Page: NextPageWithLayout = () => {
   return (
@@ -12,7 +12,8 @@ const Page: NextPageWithLayout = () => {
         <Image
           className={styles.chrisPhoto}
           alt="Photo of Chris"
-          src={chrisPhoto}
+          src="/chris_caa7fc.webp"
+          layout="fill"
         />
         <h1 className={styles.title}>Chris Cozens</h1>
         

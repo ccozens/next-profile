@@ -1,16 +1,12 @@
 import Image from 'next/image';
-import background from '../media/background.webp'
 
 const Background = () => {
 
-    // const bgPhoto = 'https://res.cloudinary.com/dyvlh6dln/image/upload/v1664008243/next-profile/ryan-hutton-Jztmx9yqjBw-unsplash_zzb28c.webp';
-    const bgPhoto = "/"
 
     return (
         <div>
             <Image 
-            // src={bgPhoto}
-            src={background} 
+            src={"/background.webp"} 
             alt="Worm's eye view of stars at night by Ryan Babel, from unsplash"
             layout="fill"
             objectFit="cover"
