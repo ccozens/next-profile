@@ -8,16 +8,14 @@ const NextProfile = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
-        <div className={styles.readme}> 
+      <div className={styles.readme}>
         <div className={styles.projectCard}>
           <div
             className={styles.projectBlurb}
             dangerouslySetInnerHTML={{ __html: item }}
-            >
-
-          </div>
+          ></div>
         </div>
-              </div>
+      </div>
     </Layout>
   );
 };

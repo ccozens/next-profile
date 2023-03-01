@@ -17,6 +17,10 @@ const MolBioTools = ({
         ></div>
       </div>
       </div>
+      <div>
+        <p> &gt; 1400 views in first 24 h when posted on <a href="https://www.reddit.com/r/molecularbiology/comments/y2whaq/protein_analysis_translation_and_reverse/">reddit</a></p>
+        <p> &gt; 1100 impressions in first 24 h when posted on <a href="https://www.linkedin.com/feed/update/urn:li:activity:6986291038659170304/">LinkedIn</a> </p>
+      </div>
     </Layout>
   );
 };

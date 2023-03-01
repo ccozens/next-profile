@@ -2,6 +2,7 @@
 
 # old versions
 /pages/old
+/media
 
 # dependencies
 /node_modules
